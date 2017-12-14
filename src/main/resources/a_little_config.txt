@@ -1,0 +1,4 @@
+jdbcUrl = jdbc:mysql://192.168.101.61:3306/b2c_v2.3_balance?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+user = root
+password = bwoil@20141030
+devMode = true
