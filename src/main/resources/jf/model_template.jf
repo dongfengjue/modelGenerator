@@ -17,7 +17,7 @@ public class #(tableMeta.modelName){
     #else
     @Column
     #end
-    private #(cm.javaType) #(firstCharToUpperCase(cm.attrName));
+    private #(cm.javaType) #(cm.attrName);
 
 #end
 }

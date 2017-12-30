@@ -42,11 +42,23 @@ public class MyModelGenerator extends BaseModelGenerator {
 
         while(var3.hasNext()) {
             TableMeta tableMeta = (TableMeta)var3.next();
+            modelAdapter(tableMeta);
             this.genBaseModelContent(tableMeta);
         }
 
         this.writeToFile(tableMetas);
     }
+
+    private void modelAdapter(TableMeta tableMeta){
+        if(tableMeta.baseModelName.endsWith("sDao")){
+            tableMeta.baseModelName = tableMeta.baseModelName.substring(0,tableMeta.baseModelName.length() - 4) + "Dao";
+        }
+
+        if(tableMeta.modelName.endsWith("s")){
+            tableMeta.modelName = tableMeta.modelName.substring(0,tableMeta.modelName.length() - 1);
+        }
+    }
+
 
     @Override
     protected void genBaseModelContent(TableMeta tableMeta) {

@@ -25,14 +25,14 @@ public class GeneratorMain {
 
     public static void main(String[] args) {
         // base model 所使用的包名
-        String baseModelPackageName = "com.bwoil.newc2b.api.mergeration.daos";
+        String baseModelPackageName = "com.bwoil.newc2b.api.daos";
         // base model 文件保存路径
-        String baseModelOutputDir = PathKit.getWebRootPath() + "/src/main/java/com/bwoil/newc2b/api/mergeration/daos";
+        String baseModelOutputDir = PathKit.getWebRootPath() + "/src/main/java/com/bwoil/newc2b/api/daos";
 
         // model 所使用的包名 (MappingKit 默认使用的包名)
-        String modelPackageName = "com.bwoil.newc2b.api.mergeration.types";
+        String modelPackageName = "com.bwoil.newc2b.api.types";
         // model 文件保存路径 (MappingKit 与 DataDictionary 文件默认保存路径)
-        String modelOutputDir = PathKit.getWebRootPath() + "/src/main/java/com/bwoil/newc2b/api/mergeration/types";
+        String modelOutputDir = PathKit.getWebRootPath() + "/src/main/java/com/bwoil/newc2b/api/types";
 
         // 这里可以自定义 模版
         Map<String,String> map = new HashMap<String, String>();
